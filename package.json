@@ -1,0 +1,25 @@
+{
+  "name": "swagger-ui",
+  "version": "1.0.0",
+  "description": "Swagger UI",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/adcombi/swagger-ui.git"
+  },
+  "keywords": [
+    "Swagger"
+  ],
+  "author": "Egbert Pot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adcombi/swagger-ui/issues"
+  },
+  "homepage": "https://github.com/adcombi/swagger-ui#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
