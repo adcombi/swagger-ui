@@ -6,6 +6,11 @@ $ ssh -A egbert@dkr01.adcombi.com
 $ cd Workspace/swagger-ui
 ```
 
+Or clone the codebase
+```
+$ git clone git@github.com:adcombi/swagger-ui.git
+```
+
 ### Pull and build
 ```
 $ git pull origin master
@@ -19,12 +24,12 @@ $ docker ps
 
 Run the docker container where you replace the x's for an number between 1 and 9 on a free port from the last step...
 ```
-$ docker run -d -p 127.0.0.1:x000x:5000 egbertp/swagger-ui:v1.0
+$ docker run -d -p 127.0.0.1:x000x:5000 --restart=on-failure:10 egbertp/swagger-ui:v1.0
 ```
 
 If you need to pass an environment variable, you can do that with the `-e` flag.
 ```
-$ docker run -d -p 127.0.0.1:3000x:5000 -e TZ=Europe/Amsterdam egbertp/swagger-ui:v1.0
+$ docker run -d -p 127.0.0.1:3000x:5000 -e TZ=Europe/Amsterdam --restart=on-failure:10 egbertp/swagger-ui:v1.0
 
 ```
 Note: see the 1Password tool for the full DATABASE_URL
@@ -64,4 +69,17 @@ You can kill apps the same way, by referring to the docker container ID found wi
 
 ```
 $ docker rm -f -v a30cc49985e7
+```
+
+
+## Docker compose
+
+[WIP]
+
+```
+$ docker-compose up -d
+```
+
+```
+$ docker-compose ps
 ```

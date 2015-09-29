@@ -1,0 +1,9 @@
+web:
+  image: egbertp/swagger-ui:v1.0
+  ports:
+    - "127.0.0.1:25001:5000"
+  links:
+    - db
+  environment:
+    - TZ=Europe/Amsterdam
+  restart: always
