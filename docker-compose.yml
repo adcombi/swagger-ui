@@ -1,6 +1,7 @@
 web:
-  image: egbertp/swagger-ui:v1.0
+  build: .
   name: swagger-ui
+  command: node web.js
   ports:
     - "127.0.0.1:25001:5000"
   environment:
